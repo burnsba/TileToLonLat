@@ -1,0 +1,39 @@
+﻿<UserControl 
+  x:Class="TileToLonLat.View.OsmTileView"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+  xmlns:src="clr-namespace:TileToLonLat"
+  >
+
+        <UserControl.Resources>
+                <ResourceDictionary Source="../CommonResource.xaml" />
+        </UserControl.Resources>
+
+        <DockPanel>
+                <Grid Height="120" Width="222">
+
+                        <Label Content="Column" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="lblColumn" VerticalAlignment="Top" />
+                        <Label Content="Row" Height="28" HorizontalAlignment="Left" Margin="12,46,0,0" Name="lblRow" VerticalAlignment="Top" Width="47" />
+                        <Label Content="Zoom" Height="28" HorizontalAlignment="Left" Margin="12,80,0,0" Name="lblZoom" VerticalAlignment="Top" Width="47" />
+
+                        <TextBox Style="{StaticResource txtBoxStyle}" Margin="77,14,0,0"        Name="txtColumn">
+                                <TextBox.Text>
+                                        <Binding Path="XColumn" ValidatesOnDataErrors="true" NotifyOnValidationError="True" />
+                                </TextBox.Text>
+                        </TextBox>
+                        <TextBox Style="{StaticResource txtBoxStyle}" Margin="77,48,0,0"        Name="txtRow" >
+                                <TextBox.Text>
+                                        <Binding Path="YRow" ValidatesOnDataErrors="true" NotifyOnValidationError="True" />
+                                </TextBox.Text>
+                        </TextBox>
+                        <TextBox Style="{StaticResource txtBoxStyle}" Margin="77,82,0,0"        Name="txtZoom">
+                                <TextBox.Text>
+                                        <Binding Path="Zoom" ValidatesOnDataErrors="true" NotifyOnValidationError="True" />
+                                </TextBox.Text>
+                        </TextBox>
+                        
+                </Grid>
+        </DockPanel>
+        
+</UserControl>

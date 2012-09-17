@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="TileToLonLat.View.LonLatItemsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:src="clr-namespace:TileToLonLat"
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="451"
+             >
+
+        <UserControl.Resources>
+                <ResourceDictionary Source="../CommonResource.xaml" />
+        </UserControl.Resources>
+
+
+        <Grid Height="81">
+                <Label Content="Longitude" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="lblLon" VerticalAlignment="Top" />
+                <Label Content="Latitude" Height="21" HorizontalAlignment="Left" Margin="12,46,0,0" Name="lblLatitude" VerticalAlignment="Top" Width="58" />
+
+                <TextBox Style="{StaticResource txtBoxStyle}" Margin="92,14,0,0"       Name="txtLongitude"  >
+                        <TextBox.Text>
+                                <Binding Path="Longitude" ValidatesOnDataErrors="true" NotifyOnValidationError="True" />
+                        </TextBox.Text>
+                </TextBox>
+                <TextBox Style="{StaticResource txtBoxStyle}" Margin="92,48,0,0"       Name="txtLatitude"  Width="120">
+                        <TextBox.Text>
+                                <Binding Path="Latitude" ValidatesOnDataErrors="true" NotifyOnValidationError="True" />
+                        </TextBox.Text>
+                </TextBox>
+
+                <TextBox Style="{StaticResource txtLonLatCopyTextStyle}" Height="21"  Margin="234,28,33,0" Name="txtLonLatCopyText">
+                        <TextBox.Text>
+                                <Binding Path="LonLatString" 
+                                         Mode="OneWay"/>
+                        </TextBox.Text>
+                </TextBox>
+        </Grid>
+</UserControl>
