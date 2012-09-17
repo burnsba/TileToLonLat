@@ -1,5 +1,7 @@
 This is a demo I made trying to learn WPF and MVVM.
 
+Converts between OpenStreetMap tile format and longitude/lattitude
+
 Made with Visual Studio 2012
 
 * Creates multiple views/viewmodels at runtime
