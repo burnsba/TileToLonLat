@@ -2,4 +2,4 @@ This is a demo I made trying to learn WPF and MVVM.
 
 Made with Visual Studio 2012
 
-![screenshot](./TileToLonLat/blob/master/screenshot.png?raw=true)
+![screenshot](https://raw.github.com/burnsba/TileToLonLat/master/screenshot.png)
